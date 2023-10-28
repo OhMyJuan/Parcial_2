@@ -31,6 +31,7 @@ public class HorariosUbicaciones {
         System.out.println(regiones[selec]);
         System.out.println("\t" + direccion[selec]);
         System.out.println("\t" + horarios[selec]);
+        System.out.println("\t" + telefonos[selec]);
     }
 
     static String[] regiones = {
@@ -49,5 +50,11 @@ public class HorariosUbicaciones {
         "8:00 a.m. - 5:00 p.m.  De Lunes a Viernes\n\t8:00 a.m. - 2:00 p.m. Sábados",
         "8:00 a.m. - 5:00 p.m.  De Lunes a Viernes\n\t8:00 a.m. - 12:00 p.m. Sábados",
         "8:00 a.m. - 5:00 p.m.  De Lunes a Viernes",
+    };
+
+    static String[] telefonos = {
+        "(+507) 200-0000",
+        "(+507) 211-1111",
+        "(+507) 233-3333"
     };
 }

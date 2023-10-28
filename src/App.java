@@ -31,6 +31,7 @@ public class App {
             System.out.println("    4. Horario y Ubicaciones");
             System.out.println("    5. Promociones");
             System.out.println("    6. Salir");
+            System.out.print("Ingrese la opción: ");
 
             opcion = sc.nextInt();
             Tools.limpiarConsola();
