@@ -17,7 +17,7 @@ public class Menu {
                 break;
 
             case 2:
-                Pedido.main();
+                Pedido.main(null);
                 break;
 
             case 3:
