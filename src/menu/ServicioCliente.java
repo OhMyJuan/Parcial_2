@@ -4,7 +4,7 @@ import java.util.Scanner;
 import tools.Tools;
 
 public class ServicioCliente {
-    public static void main() {
+    public static boolean main() {
 
         Scanner scanner_ServicioCliente = new Scanner(System.in);
         String pregunta;
@@ -24,6 +24,8 @@ public class ServicioCliente {
             System.out.println("Agente de Servicio al Cliente:\n\t" + respuesta);
             System.out.print("\t¿Tienes alguna otra pregunta? (Sí/No):\nTú:\t");
         } while (scanner_ServicioCliente.nextLine().equalsIgnoreCase("si"));
+
+        return false;
     }
 
     public static String responderPreguntaDelCliente(String pregunta) {

@@ -1,7 +1,9 @@
 package menu;
 
 public class Venta {
-    public static void main() {
-        System.out.print("Sección no construida...");
+    public static boolean main() {
+        System.out.println("Sección no construida...");
+
+        return false;
     }
 }

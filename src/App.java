@@ -12,6 +12,7 @@ public class App {
         Scanner sc = new Scanner(System.in);
         String nombre;
         int opcion;
+        boolean salir = false;
 
         Tools.limpiarConsola();
 
@@ -21,7 +22,8 @@ public class App {
         } while (nombre.length() == 0);
 
 
-        do {
+        while (!salir) {
+
             Tools.limpiarConsola();
 
             System.out.println("MENÚ PRINCIPAL");
@@ -33,15 +35,30 @@ public class App {
             System.out.println("    6. Salir");
             System.out.print("Ingrese la opción: ");
 
-            opcion = sc.nextInt();
-            Tools.limpiarConsola();
+            try {
+                opcion = sc.nextInt();
 
-            Menu.main(opcion, sc);
+                Tools.limpiarConsola();
 
-            if (opcion != 6) {
-                sc.nextLine();
+                if (opcion <= 6 && opcion >= 0) {
+                    salir = Menu.main(opcion, sc);
+                }
+
+                if (opcion != 6) {
+                    sc.nextLine();
+                }
+
+            } catch (java.util.InputMismatchException e) {
+                Tools.limpiarConsola();
+                System.out.println("Debe ingresar un valor válido!!");
+            } finally {
+                if (salir == false) {
+                    System.out.println("Presione ENTER para continuar");
+                    sc.nextLine();
+                }
             }
-        } while (opcion != 6);
+
+        }
 
         sc.close();
     }

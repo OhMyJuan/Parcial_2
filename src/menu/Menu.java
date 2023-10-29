@@ -8,41 +8,41 @@ package menu;
 import java.util.Scanner;
 
 public class Menu {
-    public static void main(int opcion, Scanner sc) {
+    public static boolean main(int opcion, Scanner sc) {
+        boolean estado;
 
         // Analiza la opción que se escoje en el menú
         switch (opcion) {
             case 1:
-                Venta.main();
+                estado = Venta.main();
                 break;
 
             case 2:
-                Pedido.main();
+                estado = Pedido.main();
                 break;
 
             case 3:
-                ServicioCliente.main();
+                estado = ServicioCliente.main();
                 break;
 
             case 4:
-                HorariosUbicaciones.main();
+                estado = HorariosUbicaciones.main();
                 break;
 
             case 5:
-                Promociones.main();
+                estado = Promociones.main();
                 break;
 
             case 6:
-                System.out.print("Hasta pronto!!");
-                System.out.println(" ");
+
+                estado = Salir.main();
+                break;
+
+            default:
+                estado = false;
                 break;
         }
 
-        if (opcion != 6) {
-            System.out.println(" ");
-            System.out.println("Presionar ENTER para regresar al Menú Principal");
-            sc.nextLine();
-        }
-
+        return estado;
     }
 }
