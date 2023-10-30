@@ -13,7 +13,7 @@ public class Menu {
         // Analiza la opción que se escoje en el menú
         switch (opcion) {
             case 1:
-                Venta.main();
+                Venta.main(null);
                 break;
 
             case 2:
