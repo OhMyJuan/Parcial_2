@@ -1,10 +1,9 @@
 /**
- * Clase con la las funciones del Pedido
+ * Clase con las funciones del Pedido
  * @author Brian Ojeda
  *
  */
 package menu;
-
 import java.util.Scanner;
 
 public class Pedido {
@@ -34,8 +33,8 @@ public class Pedido {
             System.out.print("\nDesea ver otro pedido? Si/No: ");
             salir = sc.next();
             if (!salir.equals("Si")) return;
+            sc.close();
         } while ((numPedido >= 1 && numPedido <= 3));
-        sc.close();
 
     }
 
@@ -55,7 +54,7 @@ public class Pedido {
 
         return null;
     }
-
+    
     public static class CrearPedidos {
         private int id;
         private String cliente;

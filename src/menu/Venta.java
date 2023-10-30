@@ -1,3 +1,9 @@
+/**
+ * Clase con las funciones de ventas
+ * @author Brian Ojeda
+ *
+ */
+
 package menu;
 
 import java.util.ArrayList;
@@ -90,10 +96,10 @@ public class Venta {
                 return; // Salir del bucle
             } else {
                 System.out.println("Opción no válida. Por favor, seleccione una opción válida.");
+                scanner.close();
             }
         }
 
-        // scanner.close();
     }
 }
 

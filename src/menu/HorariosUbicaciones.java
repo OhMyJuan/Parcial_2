@@ -22,6 +22,7 @@ public class HorariosUbicaciones {
         if (region != 0) {
             menuHU(region);
         }
+        scanner_HU.close();
     }
 
     public static void menuHU(int region) {
